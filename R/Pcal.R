@@ -150,7 +150,7 @@ Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit
 
             for(i in seq_along(sp[1, ])){
 
-                predictedData <- predict(sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp[ ,i]), interval = "prediction", weights = sp[ ,i]^2)
+                predictedData <- stats::predict(sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp[ ,i]), interval = "prediction", weights = sp[ ,i]^2)
                 errorFit <- cbind(errorFit, predictedData[ ,"fit"])
                 errorUpr <- cbind(errorUpr, predictedData[ ,"upr"])
 
@@ -162,7 +162,7 @@ Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit
         ## DATA PREDICTION
         if(method == "sp"){
 
-            predictedData <- predict(sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp), interval = "prediction", weights = sp^2)
+            predictedData <- stats::predict(sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp), interval = "prediction", weights = sp^2)
             
             errorFit <- predictedData[ ,"fit"] # predicted estimation error
             errorUpr <- predictedData[ ,"upr"] # upper limit of prediction interval
