@@ -6,11 +6,13 @@ Authors@R:
            family = "Engel",
            role = c("aut", "cre"),
            email = "felix.engel@anthropologie.uni-freiburg.de")
-Description: A collection of functions that help with statistical and spatial analyses
-    of skeletal populations from historic cemeteries. The first version was created as
-    an appendix to Felix Engel's thesis 'Traces of Armed Conflict: Methodological Implications
-    from Anthropological Graveyard Analyses - Applied to the Site lauchheim "Wasserfurche" 
-    With Special Reference to Cranial Trauma'.
+Description: A collection of functions that help with statistical and spatial 
+    analyses of skeletal populations from historic cemeteries. The first 
+    version was created as an appendix to Felix Engel's thesis 'Traces of 
+    Armed Conflict: Methodological Implications from Anthropological Graveyard 
+    Analyses - Applied to the Site lauchheim 'Wasserfurche' With Special 
+    Reference to Cranial Trauma'.
+Depends: R (>= 2.10)
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true
