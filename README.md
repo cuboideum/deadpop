@@ -12,7 +12,7 @@ This R package is an appendix to Felix Engel's dissertation thesis "Traces of Ar
 
 ## Installation using *devtools*
 
-You can use the *devtools* package to install this package directly from this repository by following these steps:
+You can use the [*devtools* package](https://github.com/r-lib/devtools) to install this package directly from this repository by following these steps:
 
 1. Install *devtools* from within R
 
