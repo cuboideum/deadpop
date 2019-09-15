@@ -71,7 +71,7 @@ PresSer <- function(n, c, s, i = 1, value_spec = "count"){
 
     total <- sum((length(n) * length(c) * length(s)) * i)
     cat(total, "lines of data being created.", sep = " ")
-    pb <- txtProgressBar(min = 0, max = total, style = 3)
+    pb <- utils::txtProgressBar(min = 0, max = total, style = 3)
     pbi <- 0
 
     ## CALCULATIONS
@@ -93,7 +93,7 @@ PresSer <- function(n, c, s, i = 1, value_spec = "count"){
                     temp <- PresMod(n = n[ni], c = c[ci], s = s[si], i = i[ii], value_spec = value_spec)
                     out <- rbind(out, temp)
                     pbi <- pbi + i[ii]
-                    setTxtProgressBar(pb, pbi)
+                    utils::setTxtProgressBar(pb, pbi)
 
                 }
 
