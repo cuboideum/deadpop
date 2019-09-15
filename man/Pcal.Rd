@@ -64,9 +64,10 @@ Output are a number of data items approximating true prevalence.
    errors and the upper limit of the 0.95 prediction interval.
 
    If paramters \code{n}, \code{s} and \code{c} are provided as vectors, 
-   output will be a data frame with rows reprenting populations and columns 
-   the output items. If the parameters are provided as matrices, output 
-   will be a list of matrices, each providing the data for one output item.
+   output will be a data frame with rows representing populations and 
+   columns the output items. If the parameters are provided as matrices, 
+   output will be a list of matrices, each providing the data for one 
+   output item.
 }
 \description{
 \code{Pcal} calculates several parameters describing the prevalence of a 
@@ -115,4 +116,7 @@ Here, the matrix rows are interpreted to represent different populations
 while the columns are understood to represent skeletal segments for 
 which data were collected separately. The parameter \code{segnames} 
 can be used to provide the names of the segments as column names.
+}
+\seealso{
+\code{\link{sp_Pserrabs.mod1}}
 }

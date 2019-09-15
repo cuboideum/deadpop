@@ -101,9 +101,12 @@
 #'    errors and the upper limit of the 0.95 prediction interval.
 #'
 #'    If paramters \code{n}, \code{s} and \code{c} are provided as vectors, 
-#'    output will be a data frame with rows reprenting populations and columns 
-#'    the output items. If the parameters are provided as matrices, output 
-#'    will be a list of matrices, each providing the data for one output item.
+#'    output will be a data frame with rows representing populations and 
+#'    columns the output items. If the parameters are provided as matrices, 
+#'    output will be a list of matrices, each providing the data for one 
+#'    output item.
+#'
+#' @seealso \code{\link{sp_Pserrabs.mod1}}
 
 Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit = 0.2, Pint_limit = 0.8){
 
