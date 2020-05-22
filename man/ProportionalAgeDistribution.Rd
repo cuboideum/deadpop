@@ -4,9 +4,12 @@
 \alias{ProportionalAgeDistribution}
 \title{Proportional Distribution of Age Estimates Among Age Categories}
 \usage{
-ProportionalAgeDistribution(minAge = NA, maxAge = NA,
+ProportionalAgeDistribution(
+  minAge = NA,
+  maxAge = NA,
   cats = seq(floor(min(minAge)), ceiling(max(maxAge)), 1),
-  accept.empty = FALSE)
+  accept.empty = FALSE
+)
 }
 \arguments{
 \item{minAge, maxAge}{Vectors of integers specifying minimum and maximum 

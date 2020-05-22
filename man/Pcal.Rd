@@ -4,8 +4,16 @@
 \alias{Pcal}
 \title{Prevalence Calibration}
 \usage{
-Pcal(ID = NULL, segnames = NULL, n, s, c, method = c("sp"),
-  sp_limit = 0.2, Pint_limit = 0.8)
+Pcal(
+  ID = NULL,
+  segnames = NULL,
+  n,
+  s,
+  c,
+  method = c("sp"),
+  sp_limit = 0.2,
+  Pint_limit = 0.8
+)
 }
 \arguments{
 \item{ID}{A vector containing identifiers of the investigations for which 
