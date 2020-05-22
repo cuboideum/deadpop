@@ -50,6 +50,8 @@
 #'    preserved individuals/elements (\code{value_spec} = 'count').
 #'
 #' @seealso \code{\link{PresMod}}
+#'
+#' @export
 
 PresSer <- function(n, c, s, i = 1, value_spec = "count"){
 

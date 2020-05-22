@@ -42,6 +42,8 @@
 #' @section References:
 #'    Boldsen JL. 1988. Two Methods for Reconstructing the Empirical Mortality 
 #'    Profile. Human Evolution 3(5):335-342.
+#'
+#' @export
 
 ProportionalAgeDistribution <- function(minAge = NA, maxAge = NA, cats = seq(floor(min(minAge)), ceiling(max(maxAge)), 1), accept.empty = FALSE){
     

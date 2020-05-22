@@ -41,6 +41,8 @@
 #' @return A vector of length \code{n} is returned, giving the distances to 
 #'    \code{l} for all nearest neighbours that have been determined. The 
 #'    names of the vector elements give the points identifiers from \code{ID}.
+#'
+#' @export
 
 SpatialNeighbours <-
 function(ID, x, y, n, l, l.included = TRUE, l.x = NA, l.y = NA) {
