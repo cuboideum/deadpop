@@ -4,8 +4,7 @@
 \alias{SpatialNeighbours}
 \title{Nearest Neighbours Among Data Points on a Two-dimensional Map}
 \usage{
-SpatialNeighbours(ID, x, y, n, l, l.included = TRUE, l.x = NA,
-  l.y = NA)
+SpatialNeighbours(ID, x, y, n, l, l.included = TRUE, l.x = NA, l.y = NA)
 }
 \arguments{
 \item{ID}{A vector of distinct identifiers for all cloud points.}

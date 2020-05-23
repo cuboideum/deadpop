@@ -58,6 +58,8 @@
 #' @section References:
 #'    Waldron T. 2009. Palaeopathology. Cambridge: Cambridge University Press. 
 #'    p. 249-261.
+#'
+#' @export
 
 PresMod <- function(n, c, s, i=1, value_spec = "count"){
 

@@ -107,6 +107,8 @@
 #'    output item.
 #'
 #' @seealso \code{\link{sp_Pserrabs.mod1}}
+#'
+#' @export
 
 Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit = 0.2, Pint_limit = 0.8){
 
