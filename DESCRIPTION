@@ -1,6 +1,6 @@
 Package: deadpop
 Title: Analysis of Skeletal Populations
-Version: 0.2.0
+Version: 0.1.2
 Authors@R: 
     person(given = "Felix",
            family = "Engel",
