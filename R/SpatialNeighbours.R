@@ -45,7 +45,7 @@
 #' @export
 
 SpatialNeighbours <-
-function(ID, x, y, n, l=NULL, l.included = TRUE, l.x = NA, l.y = NA) {
+function(ID, x, y, n, l=NA, l.included = TRUE, l.x = NA, l.y = NA) {
   
                                         # assessment of input
   
