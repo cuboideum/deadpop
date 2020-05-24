@@ -4,16 +4,8 @@
 \alias{Pcal}
 \title{Prevalence Calibration}
 \usage{
-Pcal(
-  ID = NULL,
-  segnames = NULL,
-  n,
-  s,
-  c,
-  method = c("sp"),
-  sp_limit = 0.2,
-  Pint_limit = 0.8
-)
+Pcal(ID = NULL, segnames = NULL, n, s, c, method = c("sp"),
+  sp_limit = 0.2, Pint_limit = 0.8)
 }
 \arguments{
 \item{ID}{A vector containing identifiers of the investigations for which 
@@ -124,6 +116,24 @@ Here, the matrix rows are interpreted to represent different populations
 while the columns are understood to represent skeletal segments for 
 which data were collected separately. The parameter \code{segnames} 
 can be used to provide the names of the segments as column names.
+}
+\examples{
+
+# Evaluation of a single sample
+Pcal(n=100, s=72, c=5)
+
+# Evaluation of three samples named 'fg1' to 'fg3'
+Pcal(ID=c("fg1", "fg2", "fg3"), n=rep(100, 3), s=c(82, 41, 67), c=c(12, 6, 8))
+
+# Evaluation of data collected from three bone segments, 'frl', 'frm' and 'frr', 
+# in three samples named 'fg1' to 'fg3'
+id_x <- c("fg1", "fg2", "fg3")
+segnames_x <- c("frl", "frm", "frr")
+n_x <- matrix(rep(100, 9), nrow=3, byrow =TRUE)
+s_x <- matrix(c(82, 85, 78, 46, 52, 49, 72, 89, 68), nrow=3, byrow=TRUE)
+c_x <- matrix(c(0, 0, 5, 1, 3, 2, 12, 3, 0), nrow=3, byrow=TRUE)
+Pcal(ID=id_x, segnames=segnames_x, n=n_x, s=s_x, c=c_x)
+
 }
 \seealso{
 \code{\link{sp_Pserrabs.mod1}}

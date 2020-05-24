@@ -59,6 +59,16 @@
 #'    Waldron T. 2009. Palaeopathology. Cambridge: Cambridge University Press. 
 #'    p. 249-261.
 #'
+#' @examples
+#'
+#' # Specification of sample size and case number as absolute counts
+#' PresMod(n=100, c=9, s=69)
+#' PresMod(n=100, c=9, s=69, i=5)
+#'
+#' # Specification of sample size and case number as portions
+#' PresMod(n=100, c=0.09, s=0.69, value_spec="portion")
+#' PresMod(n=100, c=0.09, s=0.69, i=5, value_spec="portion")
+#'
 #' @export
 
 PresMod <- function(n, c, s, i=1, value_spec = "count"){
@@ -89,7 +99,7 @@ PresMod <- function(n, c, s, i=1, value_spec = "count"){
 
     ## CREATE OUTPUT
 
-    output <- data.frame(rep(n, i), rep(c, i), rep(p, i), rep(i, i), samples)
+    output <- data.frame(rep(n, i), rep(c, i), rep(s, i), rep(i, i), samples)
     names(output) <- c("n", "c", "s", "i", "c_count")
 
     return(output)

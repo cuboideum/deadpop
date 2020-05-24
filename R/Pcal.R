@@ -106,6 +106,23 @@
 #'    output will be a list of matrices, each providing the data for one 
 #'    output item.
 #'
+#' @examples
+#' 
+#' # Evaluation of a single sample
+#' Pcal(n=100, s=72, c=5)
+#' 
+#' # Evaluation of three samples named 'fg1' to 'fg3'
+#' Pcal(ID=c("fg1", "fg2", "fg3"), n=rep(100, 3), s=c(82, 41, 67), c=c(12, 6, 8))
+#' 
+#' # Evaluation of data collected from three bone segments, 'frl', 'frm' and 'frr', 
+#' # in three samples named 'fg1' to 'fg3'
+#' id_x <- c("fg1", "fg2", "fg3")
+#' segnames_x <- c("frl", "frm", "frr")
+#' n_x <- matrix(rep(100, 9), nrow=3, byrow =TRUE)
+#' s_x <- matrix(c(82, 85, 78, 46, 52, 49, 72, 89, 68), nrow=3, byrow=TRUE)
+#' c_x <- matrix(c(0, 0, 5, 1, 3, 2, 12, 3, 0), nrow=3, byrow=TRUE)
+#' Pcal(ID=id_x, segnames=segnames_x, n=n_x, s=s_x, c=c_x)
+#' 
 #' @seealso \code{\link{sp_Pserrabs.mod1}}
 #'
 #' @export
@@ -117,7 +134,7 @@ Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit
     if(length(which(c > s)) > 0) stop("Some case counts are higher than the respective sample sizes.")
     if(is.matrix(n)){
         if(!(is.matrix(s) && is.matrix(c))) stop("Data types of n, s and c are not identical.")
-        if(!(dim(n) == dim(s) && dim(s) == dim(c))) stop("Dimensions of n, s and c are not identical.")
+        if(!identical(dim(n), dim(s), dim(s))) stop("Dimensions of n, s and c are not identical.")
         if(!is.null(ID)){
             if(!length(ID) == dim(n)[1]) stop("Length of ID does not match number of data rows.")
         }
@@ -152,7 +169,7 @@ Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit
 
             for(i in seq_along(sp[1, ])){
 
-                predictedData <- stats::predict(sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp[ ,i]), interval = "prediction", weights = sp[ ,i]^2)
+                predictedData <- stats::predict(deadpop::sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp[ ,i]), interval = "prediction", weights = sp[ ,i]^2)
                 errorFit <- cbind(errorFit, predictedData[ ,"fit"])
                 errorUpr <- cbind(errorUpr, predictedData[ ,"upr"])
 
@@ -164,7 +181,7 @@ Pcal <- function(ID = NULL, segnames = NULL, n, s, c, method = c("sp"), sp_limit
         ## DATA PREDICTION
         if(method == "sp"){
 
-            predictedData <- stats::predict(sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp), interval = "prediction", weights = sp^2)
+            predictedData <- stats::predict(deadpop::sp_Pserrabs.mod1, newdata = data.frame(sp_dat = sp), interval = "prediction", weights = sp^2)
             
             errorFit <- predictedData[ ,"fit"] # predicted estimation error
             errorUpr <- predictedData[ ,"upr"] # upper limit of prediction interval
