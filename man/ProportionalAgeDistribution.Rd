@@ -59,3 +59,16 @@ performed by this function.
    Profile. Human Evolution 3(5):335-342.
 }
 
+\examples{
+
+## Age estimations for four individuals
+min_x <- c(3, 14, 24, 45)
+max_x <- c(5, 22, 35, 80)
+x1 <- ProportionalAgeDistribution(minAge=min_x, maxAge=max_x)
+sum(x1) # number of individuals represented in categories of x1
+x2 <- ProportionalAgeDistribution(minAge=min_x, maxAge=max_x, cats = c(0, 20, 40, 60, 80))
+sum(x2) # number of individuals represented in categories of x2
+x3 <- ProportionalAgeDistribution(minAge=min_x, maxAge=max_x, cats = c(10, 20, 30, 40))
+sum(x3) # number of individuals represented in categories of x3
+
+}

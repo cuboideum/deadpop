@@ -119,14 +119,14 @@ can be used to provide the names of the segments as column names.
 }
 \examples{
 
-# Evaluation of a single sample
+## Evaluation of a single sample
 Pcal(n=100, s=72, c=5)
 
-# Evaluation of three samples named 'fg1' to 'fg3'
+## Evaluation of three samples named 'fg1' to 'fg3'
 Pcal(ID=c("fg1", "fg2", "fg3"), n=rep(100, 3), s=c(82, 41, 67), c=c(12, 6, 8))
 
-# Evaluation of data collected from three bone segments, 'frl', 'frm' and 'frr', 
-# in three samples named 'fg1' to 'fg3'
+## Evaluation of data collected from three bone segments, 'frl', 'frm' and 'frr', 
+## in three samples named 'fg1' to 'fg3'
 id_x <- c("fg1", "fg2", "fg3")
 segnames_x <- c("frl", "frm", "frr")
 n_x <- matrix(rep(100, 9), nrow=3, byrow =TRUE)

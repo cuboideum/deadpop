@@ -64,6 +64,15 @@ preservation on the calculation of frequencies under diverse conditions.
    preserved individuals/elements (\code{value_spec} = 'count').
 }
 
+\examples{
+
+## Specification of case numbers and sample sizes as absolute numbers
+PresSer(n=c(60, 70, 80), c=c(5, 12), s=55, i=2)
+
+## Specification of case numbers and sample sizes as portions
+PresSer(n=c(60, 70, 80), c=0.8, s=c(0.65, 0.55), i=3, value_spec="portion")
+
+}
 \seealso{
 \code{\link{PresMod}}
 }

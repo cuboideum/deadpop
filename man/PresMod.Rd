@@ -73,11 +73,11 @@ research projects.
 
 \examples{
 
-# Specification of sample size and case number as absolute counts
+## Specification of sample size and case number as absolute counts
 PresMod(n=100, c=9, s=69)
 PresMod(n=100, c=9, s=69, i=5)
 
-# Specification of sample size and case number as portions
+## Specification of sample size and case number as portions
 PresMod(n=100, c=0.09, s=0.69, value_spec="portion")
 PresMod(n=100, c=0.09, s=0.69, i=5, value_spec="portion")
 
