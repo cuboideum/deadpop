@@ -32,3 +32,10 @@ prevalence function yields the slope of a tangent line to this graph for a
 specific sample size. It has been hypothesised to serve as an indicator of 
 the effect of sample size on the local prevalence ratio.
 }
+\examples{
+
+Pderiv(s=82, c=12)
+
+Pderiv(s=43, c=12)
+
+}

@@ -4,10 +4,8 @@
 \name{sp_Pserrabs.mod1}
 \alias{sp_Pserrabs.mod1}
 \title{Prevalence Calibration Model}
-\format{
-An R object of class \code{lm} as produced by the function 
-   \code{\link[stats]{lm}}.
-}
+\format{An R object of class \code{lm} as produced by the function 
+   \code{\link[stats]{lm}}.}
 \source{
 The data object was produced as part of Felix Engel's PhD thesis, 
    entitled 'Traces of Armed Conflict: Methodological Implications from 

@@ -22,6 +22,12 @@
 #' @return The derivative of the prevalence function is returned as a rational 
 #'    number.
 #'
+#' @examples
+#'
+#' Pderiv(s=82, c=12)
+#'
+#' Pderiv(s=43, c=12)
+#'
 #' @export
 
 Pderiv <- function(s, c){
