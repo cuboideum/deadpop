@@ -13,7 +13,7 @@ Description: A collection of functions that help with statistical and spatial
     Analyses - Applied to the Site lauchheim 'Wasserfurche' With Special 
     Reference to Cranial Trauma'.
 Depends: R (>= 2.10)
-License: GPL-3
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
